@@ -1,0 +1,47 @@
+# myFirstHaspMap
+This is my first acquaintance with HashMap 
+
+package sample;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main{
+
+    public static void main(String[] args){
+        //My first HaspMap for Cats
+
+        //key String typem. Value Integer type
+        HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
+
+        hashMap.put("Fill", 8);
+        hashMap.put("Jakob", 9);
+        hashMap.put("Loui", 7);
+        //Rewriting a value for key: Jakob
+        hashMap.put("Jakob", 7);
+        hashMap.put("Jakob", 11);
+        
+        System.out.println(hashMap.size());
+        //Set all the keys
+        for(String key : hashMap.keySet()){
+            System.out.println("Key: " + key);
+        }
+
+        //Set all the values
+        for(int value : hashMap.values()){
+            System.out.println("Values: " + value);
+        }
+        //Sort and print all the keys with their values;
+        for(Map.Entry entry : hashMap.entrySet()){
+            System.out.println("key: " + entry.getKey() + " Values: " + entry.getValue());
+        }
+
+
+    }
+}
